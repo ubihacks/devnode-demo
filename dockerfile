@@ -1,5 +1,7 @@
-FROM python:3.7-alpine
-
-COPY main.py  /
-
-CMD ["python", "main.py"]
+FROM node:13.14-alpine 
+WORKDIR /app
+COPY package.json /app
+RUN npm install
+COPY . /app
+CMD node app.js
+EXPOSE 3000
