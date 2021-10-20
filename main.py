@@ -1,2 +1,2 @@
 
-print('Pyhton app')
+print('Pyhton App')
